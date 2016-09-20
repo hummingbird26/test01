@@ -1,0 +1,24 @@
+<html>
+
+    <head>
+    </head>
+    <body>
+        <div>
+            <input id = 'inp-test'>
+        </div>
+        <div>
+            <p id = 'text-test'></p>
+        </div>
+
+        <script>
+          
+                var node_input = document.getElementById('inp-test');
+                node_input.addEventListener('keydown',function(){
+                    var node_text = document.getElementById('text-test');
+                    node_text.innerText = node_input.value;z
+                },false);
+            
+        </script>
+
+    </body>
+</html>
