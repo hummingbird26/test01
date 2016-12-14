@@ -4,17 +4,24 @@
 	<HEAD>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	
 
 		<script>
             var i = 1;
             
 			function createripple(){
                 console.log(i);
-                var textarea = $("#ripple").val();
-                console.log(textarea);
-				$("#test").append("<tr><th>"+i+"</th><th>"+textarea+"</th></tr>");
-                i = i+1;
+                var textarea = document.getElementById("ripple");
+                var rtext = textarea.value
+                console.log(rtext);
+                
+				mytable = document.getElementById('test');
+                row = mytable.insertRow(mytable.rows.length);
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell1.innerHTML = i;
+                cell2.innerHTML = rtext;
+                i = i+1;        
 			}
 
 
