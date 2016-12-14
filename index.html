@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+	<HEAD>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+		<script>
+            var i = 1;
+            
+			function createripple(){
+                console.log(i);
+                var textarea = $("#ripple").val();
+                console.log(textarea);
+				$("#test").append("<tr><th>"+i+"</th><th>"+textarea+"</th></tr>");
+                i = i+1;
+			}
+
+
+		</script>
+	</HEAD>
+
+	<BODY>
+
+        <form id = "form">
+
+            <textarea form = "form" id = "ripple" cols = "50" rows = "20">내용을 입력해 주세요.</textarea><br>
+           <input type="button" value="댓글작성" onclick="createripple()"></div>
+		  
+
+        </form>
+
+        <table id = "test" border = "1" width = "500">
+            <tr>
+                <th>번호</th>
+                <th>내용</th>
+            </tr>
+
+        </table>
+
+	</BODY>
+</HTML>
