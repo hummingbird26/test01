@@ -1,43 +1,50 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0034)https://hki21038.github.io/test01/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
 
-	<HEAD>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-		<script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	
 
 		<script>
             var i = 1;
             
 			function createripple(){
                 console.log(i);
-                var textarea = $("#ripple").val();
-                console.log(textarea);
-				$("#test").append("<tr><th>"+i+"</th><th>"+textarea+"</th></tr>");
-                i = i+1;
+                var textarea = document.getElementById("ripple");
+                var rtext = textarea.value
+                console.log(rtext);
+                
+				mytable = document.getElementById('test');
+                row = mytable.insertRow(mytable.rows.length);
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell1.innerHTML = i;
+                cell2.innerHTML = rtext;
+                i = i+1;        
 			}
 
 
 		</script>
-	</HEAD>
+	</head>
 
-	<BODY>
+	<body>
 
-        <form id = "form">
+        <form id="form">
 
-            <textarea form = "form" id = "ripple" cols = "50" rows = "20">내용을 입력해 주세요.</textarea><br>
-           <input type="button" value="댓글작성" onclick="createripple()"></div>
+            <textarea form="form" id="ripple" cols="50" rows="20">내용을 입력해 주세요.</textarea><br>
+           <input type="button" value="댓글작성" onclick="createripple()">
 		  
 
         </form>
 
-        <table id = "test" border = "1" width = "500">
-            <tr>
+        <table id="test" border="1" width="500">
+            <tbody><tr>
                 <th>번호</th>
                 <th>내용</th>
             </tr>
 
-        </table>
+        <tr><td>1</td><td>내용을 입력해 주세요.</td></tr><tr><td>2</td><td>내용을 입력해 주세요.</td></tr></tbody></table>
 
-	</BODY>
-</HTML>
+	
+
+</body></html>
